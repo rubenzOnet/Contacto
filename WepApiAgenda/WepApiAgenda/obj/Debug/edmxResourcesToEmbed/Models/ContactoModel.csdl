@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AgendaCoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Contacto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Apellidos" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Empresa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Sexo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Calle1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Calle2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CodigoPostal" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Ciudad" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Estado" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Pais" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Estatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fecha_alta" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="AgendaCoreEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Contacto" EntityType="Self.Contacto" />
+  </EntityContainer>
+</Schema>

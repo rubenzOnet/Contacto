@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AgendaCoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Contacto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Apellidos" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Empresa" Type="nvarchar" MaxLength="100" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="150" />
+    <Property Name="Sexo" Type="nvarchar" MaxLength="10" />
+    <Property Name="Calle1" Type="nvarchar" MaxLength="200" />
+    <Property Name="Calle2" Type="nvarchar" MaxLength="200" />
+    <Property Name="CodigoPostal" Type="nvarchar" MaxLength="5" />
+    <Property Name="Ciudad" Type="nvarchar" MaxLength="100" />
+    <Property Name="Estado" Type="nvarchar" MaxLength="100" />
+    <Property Name="Pais" Type="nvarchar" MaxLength="100" />
+    <Property Name="Estatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fecha_alta" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="AgendaCoreModelStoreContainer">
+    <EntitySet Name="Contacto" EntityType="Self.Contacto" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
